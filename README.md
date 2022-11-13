@@ -60,13 +60,17 @@
  
     http://localhost:[port]/api/*
 
+    {
+        "name": "newName" /string/,
+        "price": "123" /number/
+    }
 
 #### Response (200: OK)
     {
       "id": 4,
       "name": "item4",
       "price" "$130",
-      "update": 13/11/2022
+      "update": 12/11/2022
     }
     
  
@@ -75,14 +79,34 @@
 
  `PUT / products/:id`
  
-    http://localhost:[port]/api/products/2
+    http://localhost:[port]/api/products/4
+    
+    {
+        "name": "item4.1",
+        "price": "125"
+    }
 
 
 #### Response (200: OK)
     {
       "id": 4,
-      "name": "item4",
-      "price" "$130",
+      "name": "item4.1",
+      "price" "$125",
+      "update": 13/11/2022
+    }
+    
+ ### How to delete item
+#### Request
+
+ `DELETE / products/:id`
+ 
+    http://localhost:[port]/api/products/4
+    
+#### Response (200: OK)
+    {
+      "id": 4,
+      "name": "item4.1",
+      "price" "$125",
       "update": 13/11/2022
     }
 
