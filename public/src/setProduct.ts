@@ -8,9 +8,13 @@ function newDate(): string {
   return day + "/" + month + "/" + year;
 }
 
-export function newProduct(req: any, products: any) {
-  const product = {
-    id: products.length + 1,
+export function newProduct(req: any, products: any): object {
+  const idsArray: Array<number> = products.map((product: any) => product.id);
+  const lastId: number = idsArray[idsArray.length - 1];
+  const newId: number = lastId + 1;
+
+  const product: object = {
+    id: !products ? 1 : newId,
     name: req.body.name,
     price: "$" + req.body.price,
     update: updateDate,
@@ -19,7 +23,7 @@ export function newProduct(req: any, products: any) {
   return product;
 }
 
-export function updateProduct(req: any, product: any) {
+export function updateProduct(req: any, product: any): object {
   product.name = req.body.name;
   product.price = "$" + req.body.price;
   product.update = updateDate;

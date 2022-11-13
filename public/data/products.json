@@ -154,5 +154,17 @@
     "name": "product26",
     "price": "$762",
     "update": "12/11/2022"
+  },
+  {
+    "id": 27,
+    "name": "product27",
+    "price": "$948",
+    "update": "13/11/2022"
+  },
+  {
+    "id": 30,
+    "name": "product30",
+    "price": "$813",
+    "update": "13/11/2022"
   }
 ]
